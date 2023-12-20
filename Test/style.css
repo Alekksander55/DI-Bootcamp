@@ -1,0 +1,11 @@
+.parent{
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+}
+.child{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin-bottom: -5px;
+}
