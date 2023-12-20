@@ -1,3 +1,5 @@
+
+
 body{
     background-image: url(https://user-images.githubusercontent.com/30896388/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
     background-size: cover;
@@ -13,7 +15,7 @@ ul {
 
 li{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     float: right;
     color: white;
     list-style-type: none;
