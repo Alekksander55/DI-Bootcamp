@@ -1,10 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Roboto:wght@100&display=swap');
 
 body{
-    background-image: url(https://user-images.githubusercontent.com/30896388/168069577-2f570d08-61d3-49d8-b7dd-c4b9192aaf68.jpg);
-    background-size: cover;
+    margin: 0;
+    
 }
 
+header{
+    background-image: url(thor.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 ul {
     list-style-type: none;
     margin: 0px;
@@ -14,7 +20,7 @@ ul {
 }
 
 li{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Marcellus SC', serif;
     font-size: 60px;
     float: right;
     color: white;
@@ -35,8 +41,12 @@ li a:hover{
 
 article{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 550px;
+}
+
+p{
+    margin: 0;
 }
