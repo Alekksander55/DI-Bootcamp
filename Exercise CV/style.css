@@ -48,8 +48,8 @@ body{
 
 .texteprofil .photoprofil{
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
 }
