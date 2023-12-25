@@ -79,8 +79,7 @@
 
 // 1.
 
-// let userNumber = prompt("Pick a number")
-// userNumber = Number(userNumber)
+// let userNumber = Number(prompt("Pick a number"))
 // while(userNumber<10){
 //     userNumber = prompt("Pick a number, please")
 // }
