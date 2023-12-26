@@ -44,14 +44,16 @@
 // for(item of shoppingList){
 //     if(item in stock === true){
 //         if(stock[item] > 0){
-//         bill = bill + prices[item]    
+//         bill = bill + prices[item] 
+//         stock[item]--   
 //         }
 //     }
 // } return bill;
 // }
 
-// myBill()
+// // myBill()
 // console.log(myBill())
+// console.log(stock)
 
 // ------------------------------------------------------------------------------
 // Exercise 3 : What’s In My Wallet ?
@@ -169,23 +171,57 @@
 // ------------------------------------------------------------------------------
 
 
-// const allBooks = [{
+const allBooks = [{
 
-//     title: 'Harry Potter',
-//     author: 'JK Rowling',
-//     image: 'https://images.booksense.com/images/403/353/9780590353403.jpg',
-//     alreadyRead: 'true'
-//     } ,
+    title: 'Harry Potter',
+    author: 'JK Rowling',
+    image: 'https://images.booksense.com/images/403/353/9780590353403.jpg',
+    alreadyRead: 'true'
+    } ,
 
-//     {
-//         title: 'Lord of the rings',
-//         author: 'Tolkien',
-//         image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg',
-//         alreadyRead: 'false'
-//     } 
-// ]
+    {
+        title: 'Lord of the rings',
+        author: 'Tolkien',
+        image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg',
+        alreadyRead: 'false'
+    } 
+]
 
-// let section = document.querySelector('section')
+let section = document.querySelector('section')
+
+for(i in allBooks){
+    let div = document.createElement(`div${i}`)
+    // let div1 = document.createElement('div')
+    
+    div.classList.add('light_blue', 'center')
+    // div1.classList.add('light_blue', 'center')
+
+    section.appendChild(div)
+    // section.appendChild(div1)
+
+    let p = document.createElement(`p${i}`)
+    // let p1 = document.createElement('p')
+
+    div.appendChild(p)
+    // div1.appendChild(p1)
+
+    let credits = document.createTextNode(`${allBooks[`${i}`].title} written by ${allBooks[`${i}`].author}`)
+    // let credits1 = document.createTextNode(`${allBooks[1].title} written by ${allBooks[1].author}`)
+
+    p.append(credits)
+    // p1.append(credits1)
+
+    let img = document.createElement(`img${i}`)
+    // let img1 = document.createElement('img')
+
+    img.setAttribute('src', allBooks[`${i}`].image)
+    img.setAttribute('width', '100px')
+    // img1.setAttribute('src', allBooks[1].image)
+    // img1.setAttribute('width', '100px')
+
+    div.appendChild(img)
+    // div1.appendChild(img1)
+}
 // let div0 = document.createElement('div')
 // let div1 = document.createElement('div')
 
