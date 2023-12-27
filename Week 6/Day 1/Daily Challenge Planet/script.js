@@ -1,4 +1,4 @@
-planets = [
+const planets = [
   "Sun",
   "Mercure",
   "Venus",
@@ -14,10 +14,11 @@ let section = document.getElementById("test")
 
 
 for(i of planets){
-  
-    i = document.createElement(`${i}`);
-    i.classList.add('planet',`${i}`);
-    section.appendChild(`${i}`);
+    console.log(i)
+    let planet = document.createElement("div");
+    console.log(planet)
+    planet.classList.add(`planet`,`${i}`);
+    section.append(planet);
 }
 
 

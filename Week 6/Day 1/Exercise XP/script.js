@@ -190,7 +190,7 @@ const allBooks = [{
 let section = document.querySelector('section')
 
 for(i in allBooks){
-    let div = document.createElement(`div${i}`)
+    let div = document.createElement(`div`)
     // let div1 = document.createElement('div')
     
     div.classList.add('light_blue', 'center')
@@ -211,7 +211,7 @@ for(i in allBooks){
     p.append(credits)
     // p1.append(credits1)
 
-    let img = document.createElement(`img${i}`)
+    let img = document.createElement(`img`)
     // let img1 = document.createElement('img')
 
     img.setAttribute('src', allBooks[`${i}`].image)
