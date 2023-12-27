@@ -184,43 +184,22 @@ const allBooks = [{
         author: 'Tolkien',
         image: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg',
         alreadyRead: 'false'
-    } 
-]
+    } ];
 
 let section = document.querySelector('section')
 
 for(i in allBooks){
-    let div = document.createElement(`div`)
-    // let div1 = document.createElement('div')
-    
+    let div = document.createElement(`div`)   
     div.classList.add('light_blue', 'center')
-    // div1.classList.add('light_blue', 'center')
-
     section.appendChild(div)
-    // section.appendChild(div1)
-
     let p = document.createElement(`p${i}`)
-    // let p1 = document.createElement('p')
-
     div.appendChild(p)
-    // div1.appendChild(p1)
-
     let credits = document.createTextNode(`${allBooks[`${i}`].title} written by ${allBooks[`${i}`].author}`)
-    // let credits1 = document.createTextNode(`${allBooks[1].title} written by ${allBooks[1].author}`)
-
     p.append(credits)
-    // p1.append(credits1)
-
     let img = document.createElement(`img`)
-    // let img1 = document.createElement('img')
-
     img.setAttribute('src', allBooks[`${i}`].image)
     img.setAttribute('width', '100px')
-    // img1.setAttribute('src', allBooks[1].image)
-    // img1.setAttribute('width', '100px')
-
     div.appendChild(img)
-    // div1.appendChild(img1)
 }
 // let div0 = document.createElement('div')
 // let div1 = document.createElement('div')
