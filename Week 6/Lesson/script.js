@@ -1,59 +1,76 @@
-// function insertRow(){
-//     var x=document.getElementById('sampleTable').insertRow(0);
-//     var y = x.insertCell(0);
-//     var z = x.insertCell(1);
-//     y.innerHTML="New Cell1";
-//     z.innerHTML="New Cell2";
-// }
-
-// function insertRow(){
-//     const table = document.querySelector('table');
-//     const trs = document.querySelectorAll('tr').length;
-//     const newRow = document.createElement("tr");
-//     const td1 = document.createElement('td');
-//     const td2 = document.createElement('td');
-//     td1.innerText = `Row ${trs + 1} cell1`;
-//     td2.innerText = `Row ${trs + 1} cell2`;
-//     newRow.append(td1, td2)
-//     table.appendChild(newRow)
-// }
-
-// let btn = document.getElementById('jsstyle')
-
-// function clickStyling(){
-//     btn.classList.add('color')
-// }
-
-// function mouseOverStyling(){
-//     btn.classList.add('fonnt')
-// }
-
-// btn.addEventListener('click', clickStyling);
-// btn.addEventListener('mouseover', mouseOverStyling)
-
-// const div = document.querySelector("div");
-
-// setInterval(function(){
-//     for(let i = 10; i>=0; i--){
-//          div.innerText = `The sales end in ${i}`
+// function numbers() {
+//     for (let i = 0; i < 5; i += 1) {
+//       console.log(i);
 //     }
-// },1000);
-// let num=10
-// setInterval(function () {
-//   if (num>=0){
-//     div.innerText=`sale ends in ${num}`;
-//     num--
+//       console.log(i);
 //   }
-// }, 1000);
-// animation
+//   numbers();
 
-// const child = document.getElementById('child');
+// function checkYear(){
+//     let Year = Number(prompt('Give your year'))
+//     console.log(Year>2000 ? 'Vous etes dans le 21e siecle' : 'Vous vivez au moyen age')
+// }
 
-// pos = 0;
-// let id = setInterval(function(){
-//     if(pos != 400){
-//         pos++
-//         child.style.left = pos + 'px'
-//         child.style.top = pos + 'px'
-//     } else clearInterval(id)
-// }, 10)
+// checkYear()
+
+// const calculator = (x,y,operator) => {
+//     return operator === '+' ? x+y:
+//         operator === '-' ? x-y:
+//       operator === '*' ? x*y:
+//     operator === '/' ? x/y: 'Invalid operator'
+// }
+
+// console.log(calculator(3,4,'/'))
+
+// function add() {
+//     let counter = 0;
+//     function plus() {
+//         counter += 1;
+//         console.log(counter) ;
+//     }
+//     plus();  
+//   }
+  
+//   add()
+
+// function outside(x) {
+//     function inside(y) {
+//        return x + y;
+//     }
+//     return inside;
+//   }
+
+// let fnInside = outside(3)
+// let result = fnInside(2)
+// console.log(result)
+
+
+// const add = a => b => c =>;
+// const result = add
+// console.log(result) // console.log 5
+
+// const person = {
+//     name: 'Lydia',
+//     age: 21,
+//   };
+  
+//   for (const item in person) {
+//     console.log(person[item]);
+//   }
+
+function createLikeCounter() {
+    let count = 0;
+    return function() {
+        count += 1; // Increment the count
+        return count; // Return the updated count
+    };
+}
+
+// Create a counter for each photo
+let photo1Likes = createLikeCounter();
+let photo2Likes = createLikeCounter();
+
+// Simulate liking each photo
+console.log("Photo 1 likes:", photo1Likes()); // Photo 1 likes: 1
+console.log("Photo 1 likes:", photo1Likes()); // Photo 1 likes: 2
+console.log("Photo 2 likes:", photo2Likes()); // Photo 2 likes: 1
