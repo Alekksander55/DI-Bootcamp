@@ -97,7 +97,7 @@
 // -------------------------------------------------------------------
 // Part I
 
-// let body = document.querySelector('body');
+let body = document.querySelector('body');
 
 // let makeJuice = (size) => { 
 //     let addIngredients = (firstIngredient, secondIngredient, thirdIngredient) => {
@@ -108,27 +108,27 @@
 //     size == 'small' || 'medium' || 'large' ? addIngredients : alert('Choose a regular size please')   
 //     }
 
-// let makeJuice = (size) => { 
-//     let ingredients = []
+let makeJuice = (size) => { 
+    let ingredients = []
         
-//     let addIngredients = (firstIngredient, secondIngredient, thirdIngredient) => {
-//         ingredients.push(firstIngredient, secondIngredient, thirdIngredient)
-//         // let div = document.createElement('div')
-//         // body.append(div)
-//         // div.innerText = `The client wants a ${size} juice, containing ${firstIngredient}, ${secondIngredient}, ${thirdIngredient}".` 
-//     }
-//     let displayJuice = () => {
-//         console.log(ingredients)
-//         let div = document.createElement('div')
-//         body.append(div)
-//         div.innerText = `The client wants a ${size} juice, containing ${ingredients[0]}, ${ingredients[1]}, ${ingredients[2]}, ${ingredients[3]}, ${ingredients[4]}, ${ingredients[5]}.` 
-//     }
-//         // size == 'small' || size == 'medium' || size == 'large' ? alert('It will be ready in a minute') : alert('Choose a regular size : small, medium or large'); 
-//     addIngredients('Banana','Strawberry','Orange')
-//     addIngredients('Grapes','Kiwi','Dattes')
-//     displayJuice()
-// }
+    let addIngredients = (firstIngredient, secondIngredient, thirdIngredient) => {
+        ingredients.push(firstIngredient, secondIngredient, thirdIngredient)
+        // let div = document.createElement('div')
+        // body.append(div)
+        // div.innerText = `The client wants a ${size} juice, containing ${firstIngredient}, ${secondIngredient}, ${thirdIngredient}".` 
+    }
+    let displayJuice = () => {
+        console.log(ingredients)
+        let div = document.createElement('div')
+        body.append(div)
+        div.innerText = `The client wants a ${size} juice, containing ${ingredients.join(' ,')}`
+    }
+        // size == 'small' || size == 'medium' || size == 'large' ? alert('It will be ready in a minute') : alert('Choose a regular size : small, medium or large'); 
+    addIngredients('Banana','Strawberry','Orange')
+    addIngredients('Grapes','Kiwi','Dattes')
+    displayJuice()
+}
 
-//     makeJuice('small')
+    makeJuice('small')
 
     
