@@ -1,56 +1,54 @@
-// -------------------------------------------------------------------------
-// Exercise 1 : Timer
-// -------------------------------------------------------------------------
+// ---------------------------------------------------------
+// Exercise 1 : Select A Kind Of Music
+// ---------------------------------------------------------
 
-// const hello = setTimeout(function(){                            Part I
-//     alert('Hello World')
-// }, 2000)
+// let genre = document.getElementById('genres')
+// let classicOption = document.createElement('option')
+// classicOption.setAttribute('value', 'classic')
+// classicOption.innerText = 'Classic'
+// genre.appendChild(classicOption)
+// classicOption.setAttribute('selected', 'selected')
 
-// let div = document.getElementById('container')                  Part II
-// console.log(div)
+// ---------------------------------------------------------
+// Exercise 2: Delete Colors
+// ---------------------------------------------------------
 
-// const hello = setTimeout(function(){
-//         const p = document.createElement('p')
-//         p.innerText = 'Hello World'
-//         div.append(p)
-// }, 2000)
+// const myBtn = document.querySelector('input')
 
-// let div = document.getElementById('container')                  Part III
-// console.log(div)
-// let i = 0
-// const hello = setInterval(function(){
-//         const p = document.createElement('p')
-//         p.innerText = 'Hello World'
-//         div.append(p)
-//         i++
-//         console.log(i)
-//         if(i > 4){
-//             clearInterval(hello)
-//         }
-        
-// }, 1000)
 
-// let button = document.getElementById('clear')
-// button.addEventListener('click', function() {
-//     clearInterval(hello)
+// myBtn.addEventListener('click', function removeColor(){
+//     const colorSelected = document.getElementById('colorSelect').options
+//     const index = colorSelected.selectedIndex
+//     colorSelected[`${index}`].remove()   
 // })
 
-// -------------------------------------------------------------------------
-// Exercise 2 : Move The Box
-// -------------------------------------------------------------------------
 
+// ---------------------------------------------------------
+// Exercise 3 : Create A Shopping List
+// ---------------------------------------------------------
 
-const animate = document.getElementById('animate')
-let pos = 0
+// let shoppingList = []
+// const form = document.createElement('form')
+// const input = document.createElement('input')
+// const button = document.createElement('button')
+// const clearButton = document.createElement('button')
+// clearButton.innerHTML = 'Clear all'
+// button.innerHTML = 'Add Item'
+// const div = document.querySelector('#root')
 
-function myMove() {
-let move = setInterval(function(){
-    if(pos != 350){
-        pos++;
-        animate.style.left = pos + 'px';
-    } else {
-        clearInterval(move)
-    }
-})
-}
+// div.append(form)
+// form.append(input)
+// form.append(button)
+// form.append(clearButton)
 
+// button.addEventListener('click', function addItem(e){
+//     e.preventDefault()
+//     shoppingList.push(input.value)
+//     console.log(shoppingList)
+// })
+
+// clearButton.addEventListener('click', function clearAll(e){
+//     e.preventDefault()
+//     shoppingList = []
+//     console.log(shoppingList)
+// })
