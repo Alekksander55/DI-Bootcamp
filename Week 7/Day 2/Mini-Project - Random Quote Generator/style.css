@@ -1,0 +1,17 @@
+.bg-custom{
+    background-color: rgb(160, 135, 105);
+}
+
+.bg-custom2{
+    background-color: beige;
+}
+
+.author{
+    color: rgb(81, 190, 190);
+    font-size: medium;
+    text-align: end;
+}
+
+.quote{
+    color: rgb(95, 92, 92);
+}
