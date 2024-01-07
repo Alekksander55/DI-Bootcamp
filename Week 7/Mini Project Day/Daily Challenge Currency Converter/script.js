@@ -6,9 +6,12 @@ const to = document.getElementById('toMoney')
 const mySwitch = document.getElementById('mySwitch')
 
 
+
 form.addEventListener('submit', function(e){
     e.preventDefault()
 })
+
+
 
 const fetchCurrencies = async () => {
         try {
@@ -32,8 +35,8 @@ const fetchCurrencies = async () => {
  
         form.addEventListener('submit', async function(){
 
-            let fromCurrency = currencies[from.selectedIndex][0]
-            let toCurrency = currencies[to.selectedIndex][0]
+            let fromCurrency = currencies[from.selectedIndex][0]        
+            let toCurrency = currencies[to.selectedIndex][0]        
             let fetchingConversion = await fetch(`https://v6.exchangerate-api.com/v6/cbac1e96d29a78698475972c/pair/${fromCurrency}/${toCurrency}`)
             let conversionJson = await fetchingConversion.json()
             let amount = conversionJson.conversion_rate
@@ -41,13 +44,13 @@ const fetchCurrencies = async () => {
         })
 
         mySwitch.addEventListener('click', async function(){
-            let fromCurrency = currencies[from.selectedIndex][0]
-            let toCurrency = currencies[to.selectedIndex][0]
-            let fetchingConversion = await fetch(`https://v6.exchangerate-api.com/v6/cbac1e96d29a78698475972c/pair/${fromCurrency}/${toCurrency}`)
-            let conversionJson = await fetchingConversion.json()
-            let amount = conversionJson.conversion_rate
-            result.innerText = `${amount*input.value} ${toCurrency}`
+            let from1 = from.selectedIndex
+            let to1 = to.selectedIndex
+            to.selectedIndex = from1
+            from.selectedIndex = to1
+            
         })
+        
         
         } catch (error) {
         console.log('error in fetchingCurrencies', error)
@@ -58,13 +61,3 @@ const fetchCurrencies = async () => {
 
 fetchCurrencies()
 
-
-// const convertCurrencies = async () =>{
-//     try {
-//         console.log(input.value)
-//         result.innerText = input.value
-        
-//     } catch (error) {
-//         console.log('Error in convert', error)
-//     }
-// }
