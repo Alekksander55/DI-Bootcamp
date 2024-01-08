@@ -11,13 +11,16 @@
     <center>
         <img src="logo.png">
         <br>
-        <div id="pokemonImg"></div>
-            <!-- <img src="pokedex.png"> -->
-        <div id="pokemonInfo"></div> 
+        <div id="container" style="position: relative;">
+            <div id="pokemonImg" style="display: inline-block;position: absolute; left: 500px; top: 100px;"></div>
+            <img src="pokedex.png">
+         <div id="pokemonInfo" style="display: inline-block;position:absolute;right: 470px; top: 400px;"></div>
+        
         <br> <br>
-        <button id="previousBtn">Previous</button>
-        <button onclick="getData()">Load a new pokemon</button>
-        <button id="nextBtn">Next</button>
+        <button id="previousBtn" style="display: inline-block;position: absolute; left: 250px;top: 465px;">---</button>
+        <button onclick="getData()" class="rounded-circle" style="display: inline-block;position: absolute; right: 205px;top: 465px;">Load</button>
+        <button id="nextBtn" style="display: inline-block;position: absolute; left: 320px;top: 464px;">+++</button>
+    </div>
     </center>
 
 
