@@ -1,6 +1,6 @@
 import chalk from "chalk"
 
-const message = () => {console.log(chalk.bgCyan('Hi this is a colourful message'))}
+const message = (msg) => {return chalk.bgCyan(msg)}
 
 export {message}
 
