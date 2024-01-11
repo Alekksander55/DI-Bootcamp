@@ -17,7 +17,7 @@ const answerQuiz = (req, res) => {
     res.json('Correct answer, now the quiz is finished, hope you enjoyed it, go to /quiz/score to get your Score')
     }else if (currentQuestion.answer.toLowerCase() != answer.toLowerCase()) {
     questionCounter++;
-    res.json(`your answer "${answer}" is incorrect , next question : ${triviaQuestions[questionCounter].question}`);
+    res.json(`your answer "${answer}" is incorrect, the correct answer was ${currentQuestion.answer} , next question : ${triviaQuestions[questionCounter].question}`);
     }else{
     questionCounter++;
     userScore++;
@@ -26,7 +26,7 @@ const answerQuiz = (req, res) => {
 };
 
 const displayScore = (req, res) => {
-  res.json(`Congrats, your score is ${userScore}`);
+  res.json(`Congrats, your score is ${userScore} / ${triviaQuestions.length}`);
 };
 
 module.exports = { startQuiz, answerQuiz, displayScore };

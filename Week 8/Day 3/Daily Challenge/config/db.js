@@ -31,6 +31,10 @@ const triviaQuestions = [
     question: "What's the Italian word for pie?",
     answer: "Pizza",
   },
+  {
+    question: "What's the Italian word for pie?",
+    answer: "Pizza",
+  },
 ];
 
 let userScore = 0;
