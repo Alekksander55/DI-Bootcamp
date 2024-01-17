@@ -1,7 +1,14 @@
 const { users } = require("../config/db.js");
+const { getAllUsersDb, getUsersDbById,addUserDb } = require("../models/users-models.js");
 
 const getAllUsers = (req, res) => {
-  res.json(users);
+  getAllUsersDb()
+    .then((data) => {
+      res.json(data);
+    })
+    .catch((err) => {
+      res.sendStatus(404);
+    });
 };
 
 const searchUser = (request, response) => {
@@ -16,17 +23,29 @@ const searchUser = (request, response) => {
   response.send(filteredUsers);
 };
 
-const getUserById = (request, response) => {
-  if (Object.values(request.params) > users.length)
-    return response.sendStatus(404);
-  response.send(users[Object.values(request.params) - 1]);
+const getUserById = async (request, response) => {
+  const { id } = request.params;
+  console.log(id);
+  try {
+    const data = await getUsersDbById(id);
+    if (data.length === 0) return response.sendStatus(404);
+    response.json(data);
+  } catch (error) {
+    response.sendStatus(404);
+    console.log(error);
+  }
 };
 
-const createUser = (request, response) => {
+const createUser = async (request, response) => {
   console.log(request.body);
-  const newUser = { ...request.body, id: users.length + 1 };
-  users.push(newUser);
-  response.send(users);
+  const { name, email, password } = request.body;
+  try {
+    const data = await addUserDb(name, email, password);
+    response.json(data);
+  } catch (error) {
+    response.sendStatus(404);
+    console.log(error);
+  }
 };
 
 const updateUser = (req, res) => {
