@@ -1,0 +1,14 @@
+.userstyle{
+    display:inline-block;
+    border:1px solid pink;
+    border-Radius:15px;
+    text-Align:center;
+    padding:20px;
+    margin:20px;
+    background-Color:orange
+}
+
+.userimage{
+    border-radius: 100px;
+    background-color: bisque;
+}
