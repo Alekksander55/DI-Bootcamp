@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import MyForm from "./components/MyForm";
+import MyResult from "./components/MyResults";
 
 function App() {
   return (
     <div className="App">
-      <form>
-        Email: <input type='text'/>
-        Password: <input type='text'/>
-        <input type='submit' value='Send'/>
-        </form>
+      <header className="App-header">
+        <MyForm />
+      </header>
     </div>
   );
 }
