@@ -13,8 +13,11 @@ const UserList = (props) => {
   return (
     <div>
       <h1>User's List</h1>
-      {user.loading ? (
-        <h1>LOADING LOADING LOADING LOADING </h1>
+      {user.loading ? (<>
+        <h1>ITS LOAAAAAADIIIIING</h1>
+        <h1>ITS LOAAAAAADIIIIING</h1>
+        <h1>ITS LOAAAAAADIIIIING</h1>
+        </>
       ) : (
         user.data?.map((item) => {
           return (
